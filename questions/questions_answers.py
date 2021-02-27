@@ -23,7 +23,7 @@ class Quiz:
         self.correct = 0
 
     def question(self, qn):
-        t = Label(root, text="Quiz in Python Programming", width=50, bg="blue", fg="white", font=("times", 20, "bold"))
+        t = Label(root, text="Career Development Prep", width=50, bg="black", fg="white", font=("times", 20, "bold"))
         t.place(x=0, y=2)
         qn = Label(root, text=q[qn], width=60, font=("times", 16, "bold"), anchor="w")
         qn.place(x=70, y=100)
@@ -33,7 +33,7 @@ class Quiz:
         val = 0
         b = []
         yp = 150
-        while val < 4:
+        while val < 2:
             btn = Radiobutton(root, text=" ", variable=self.opt_selected, value=val + 1, font=("times", 14))
             b.append(btn)
             btn.place(x=100, y=yp)
