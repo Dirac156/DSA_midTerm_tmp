@@ -3,7 +3,7 @@ from tkinter import messagebox as mb
 import json
 
 root = Tk()
-root.geometry("800x500")
+root.geometry("850x500")
 root.title("Quiz")
 with open('quiz.json') as f:
     obj = json.load(f)
@@ -50,9 +50,9 @@ class Quiz:
             val += 1
 
     def buttons(self):
-        nbutton = Button(root, text="Next", command=self.nextbtn, width=10, bg="green", fg="white",
+        nextbutton = Button(root, text="Next", command=self.nextbtn, width=10, bg="green", fg="white",
                          font=("times", 16, "bold"))
-        nbutton.place(x=200, y=380)
+        nextbutton.place(x=200, y=380)
         quitbutton = Button(root, text="Quit", command=root.destroy, width=10, bg="red", fg="white",
                             font=("times", 16, "bold"))
         quitbutton.place(x=380, y=380)
