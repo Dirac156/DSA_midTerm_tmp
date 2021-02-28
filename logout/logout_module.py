@@ -1,7 +1,12 @@
+import sys
+import time
 
-
-def logout():
+def logout(obj):
     """cehck updates"""
     """logout the user"""
     """return to the main page"""
-    pass
+    time.sleep(1)
+    #resave users progress
+    #exit the processus
+    time.sleep(1)
+    sys.exit()
