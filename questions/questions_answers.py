@@ -1,3 +1,4 @@
+from database.get_all_questions import *
 from tkinter import *
 from tkinter import messagebox as mb
 import json
@@ -5,12 +6,22 @@ import json
 root = Tk()
 root.geometry("850x500")
 root.title("Quiz")
-with open('quiz.json') as f:
-    obj = json.load(f)
-q = (obj['ques'])
-options = (obj['options'])
-a = (obj['ans'])
+# with open('quiz.JSON', "r") as f:
+#     obj = json.load(f)
+# q = (obj['ques'])
+# options = (obj['options'])
+# a = (obj['ans'])
+q = []
+options = []
+a = []
+hints = []
+my_questions = get_all_questions()
 
+for question in my_questions:
+    hints.append(question["hint"])
+    q.append(question["question"])
+    options.append(question["options"])
+    a.append(question["answer"])
 
 class Quiz:
     def __init__(self):
